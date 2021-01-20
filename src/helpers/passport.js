@@ -1,9 +1,5 @@
 import passport from "passport";
 const LocalStrategy = require("passport-local").Strategy;
-const FacebookStrategy = require("passport-facebook").Strategy;
-const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const TwitterStrategy = require("passport-twitter").Strategy;
-const VKontakteStrategy = require("passport-vkontakte").Strategy;
 import User from "../models/users";
 
 //Serialize user
@@ -17,7 +13,6 @@ passport.deserializeUser((id, done) => {
     done(err, user);
   });
 });
-
 //Local Strategy
 passport.use(
   new LocalStrategy(

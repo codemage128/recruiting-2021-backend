@@ -29,14 +29,6 @@ const userSchema = new Schema(
     lastName: String,
     lastLoggedIn: Date,
     token: String,
-    passwordResetToken: String,
-    passwordResetExpiryDate: Date,
-    social: {
-      facebook: String,
-      twitter: String,
-      instagram: String,
-      pinterest: String
-    },
   },
   { timestamps: true }
 );
