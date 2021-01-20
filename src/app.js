@@ -45,8 +45,9 @@ mongoose
   );
 // Import all routes
 import auth from "./routes/auth";
+import { allowedNodeEnvironmentFlags } from "process";
 
-
+app.get('/', (req, res) => res.send("Hello world!"));
 //Init express session
 // Helmet config
 app.use(helmet());
@@ -91,7 +92,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use(auth);
 
 app.post('/login', (req, res) => {
-   console.log(req.body);
+  console.log(req.body);
 })
 
 app.use((req, res, next) => {
